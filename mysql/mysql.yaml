@@ -85,6 +85,10 @@ kind: StorageClass
 metadata:
   name: ebs-storageclass
   namespace: expense
+  labels:
+     app: mysql
+     project: expense
+     tier: db
 provisioner: ebs.csi.aws.com
 reclaimPolicy: Retain
 volumeBindingMode: WaitForFirstConsumer
