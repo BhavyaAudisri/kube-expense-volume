@@ -72,7 +72,8 @@ spec:
       name: mysql
       namespace: expense
     spec:
-      accessModes: [ "ReadWriteOnce" ]
+      accessModes: 
+        - ReadWriteOnce
       storageClassName: "ebs-storageclass"
       resources:
         requests:
