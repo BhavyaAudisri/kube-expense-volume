@@ -12,6 +12,7 @@ provisioner: ebs.csi.aws.com
 reclaimPolicy: Delete
 volumeBindingMode: WaitForFirstConsumer
 ---
+# Headless service, normal service, StatefulSet
 apiVersion: v1
 kind: Service
 metadata:
@@ -84,10 +85,6 @@ spec:
   - metadata:
       name: mysql
       namespace: expense
-      labels:
-        app: mysql
-        project: expense
-        tier: db
     spec:
       accessModes: [ "ReadWriteOnce" ]
       storageClassName: "ebs-storageclass"
