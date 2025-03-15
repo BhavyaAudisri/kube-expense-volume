@@ -90,5 +90,5 @@ metadata:
     project: expense
     tier: db
 provisioner: ebs.csi.aws.com
-reclaimPolicy: Retain
+reclaimPolicy: Delete
 volumeBindingMode: WaitForFirstConsumer
