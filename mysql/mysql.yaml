@@ -84,6 +84,10 @@ spec:
   - metadata:
       name: mysql
       namespace: expense
+      labels:
+        app: mysql
+        project: expense
+        tier: db
     spec:
       accessModes: [ "ReadWriteOnce" ]
       storageClassName: "ebs-storageclass"
