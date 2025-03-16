@@ -1,18 +1,4 @@
 # Headless service, normal service, StatefulSet
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: ebs-storageclass
-  namespace: expense
-  labels:
-    app: mysql
-    project: expense
-    tier: db
-provisioner: ebs.csi.aws.com
-reclaimPolicy: Delete
-volumeBindingMode: WaitForFirstConsumer
----
-# Headless service, normal service, StatefulSet
 apiVersion: v1
 kind: Service
 metadata:
